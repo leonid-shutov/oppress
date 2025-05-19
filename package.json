@@ -1,21 +1,18 @@
 {
   "name": "oppress",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "author": "Leonid Shutov <leonid.shutov.main@gmail.com>",
   "description": "~Express~ ~Impress~ Oppress",
+  "license": "MIT",
+  "homepage": "https://github.com/leonid-shutov/oppress#readme",
   "main": "oppress.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leonid-shutov/oppress.git"
   },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/leonid-shutov/oppress/issues"
+  "publishConfig": {
+    "access": "public"
   },
-  "homepage": "https://github.com/leonid-shutov/oppress#readme",
   "dependencies": {
     "@fastify/cors": "^11.0.1",
     "fastify": "^5.2.1",
