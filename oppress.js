@@ -5,7 +5,7 @@ const fsp = require('node:fs').promises;
 const path = require('node:path');
 
 const errors = require('@leonid-shutov/errors');
-const { loadDir } = require('./lib/loader.js');
+const { loadDir } = require('@leonid-shutov/loader');
 const { Server } = require('./lib/server/server.js');
 
 const PATH = process.cwd();
