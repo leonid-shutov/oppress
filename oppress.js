@@ -1,8 +1,32 @@
 'use strict';
 
 const { loadRestApplication } = require('@leonid-shutov/loader');
+const fastify = require('fastify')({ logger: true });
+const cors = require('@fastify/cors');
 
-const { Server } = require('./lib/server/server.js');
+class Server {
+  constructor(router) {
+    for (const [path, methods] of Object.entries(router)) {
+      for (const [method, handler] of Object.entries(methods)) {
+        fastify[method](`/api${path}`, async (request, reply) => {
+          const { params, query, body, headers } = request;
+          const { status, body: responseBody } = await handler({ path: params, query, body, headers });
+          return reply.status(status).send(responseBody);
+        });
+      }
+    }
+  }
+
+  async start(port = 3000) {
+    await fastify.register(cors, {
+      origin: (origin, cb) => {
+        cb(null, true);
+        return;
+      },
+    });
+    await fastify.listen({ port });
+  }
+}
 
 (async () => {
   const router = await loadRestApplication({ console });
