@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@fastify/cors": "^11.0.1",
-    "@leonid-shutov/loader": "github:leonid-shutov/loader",
+    "@leonid-shutov/loader": "0.1.5",
     "fastify": "^5.2.1",
     "metaschema": "^2.2.1"
   },
