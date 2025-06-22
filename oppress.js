@@ -24,7 +24,7 @@ class Server {
         return;
       },
     });
-    await fastify.listen({ port });
+    await fastify.listen({ port, host: '0.0.0.0' });
   }
 }
 
