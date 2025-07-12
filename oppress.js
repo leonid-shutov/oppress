@@ -30,7 +30,7 @@ class Server {
 
 (async () => {
   console.time('Loading');
-  const router = await loadRestApplication({ console });
+  const router = await loadRestApplication({ console, process });
   console.timeEnd('Loading');
   const server = new Server(router);
   server.start();
