@@ -1,6 +1,6 @@
 'use strict';
 
-const { loadRestApplication } = require('@leonid-shutov/loader');
+const { loadRestApplication } = require('@leonid-shutov/uncommonjs');
 const fastify = require('fastify')({ logger: true });
 const cors = require('@fastify/cors');
 
