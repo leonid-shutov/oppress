@@ -1,6 +1,6 @@
 {
   "name": "oppress",
-  "version": "1.0.0-alpha.7",
+  "version": "1.0.0-alpha.8",
   "author": "Leonid Shutov <leonid.shutov.main@gmail.com>",
   "description": "~Express~ ~Impress~ Oppress",
   "license": "MIT",
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@fastify/cors": "^11.0.1",
-    "@leonid-shutov/uncommonjs": "1.0.0-alpha.3",
+    "@leonid-shutov/uncommonjs": "1.0.0-alpha.5",
     "fastify": "^5.2.1",
     "metaschema": "^2.2.1"
   },
